@@ -1,51 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- BOOTSTRAP 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="/styles/style.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xxl-6 left">
+        <!-- front of the card -->
+        <div class="card-front">
+          <img src="images\card-logo.svg" alt="card-logo">
+          <div class="card-text">
+            <div id="card-number">
+              0000 0000 0000 0000
+            </div>
+            <div class="owner-info">
+              <div id="card-owner">
+                Jane Appleseed
+              </div>
+              <div id="expiration-date">
+                00/00
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- back of the card -->
+        <div class="card-back">
+          <div id="cvc-code">
+            000
+          </div>
+        </div>
+      </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
 
-  000
+      <div class="col-xxl-6 right">
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="row form">
+          <div class="col-10">
+            <div class="d-flex flex-column">
+              <p class="text mb-1">CARDHOLDER NAME</p>
+              <input class="form-control mb-3" type="text" placeholder="e.g. Jane Appleseed">
+            </div>
+          </div>
+          <div class="col-10">
+            <div class="d-flex flex-column">
+              <p class="text mb-1">CARD NUMBER</p>
+              <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="d-flex flex-column">
+              <p class="text mb-2">EXP. DATE (MM/YY)</p>
+              <div class="input-group mb-3 exp-date">
+                <input class="form-control mb-1 rounded" type="text" placeholder="MM">
+                <input class="form-control mb-1 yy rounded" type="text" placeholder="YY">
+              </div>
+            </div>
+          </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+          <div class="col-5">
+            <div class="d-flex flex-column">
+              <p class="text mb-2">CVC</p>
+              <input class="form-control" type="password" placeholder="e.g. 123">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="btn btn-primary mb-1 rounded">
+              <span class="ps-3">Confirm</span>
+              <span class="fas fa-arrow-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,117 @@
+body {
+    background-image: url("/images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 45vh 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+/* LEFT SECTION */
+.left {
+    padding: 15rem 0 0 10rem;
+}
+
+/* front card customization and positioning */
+.card-front {
+    height: 245px;
+    width: 447px;
+    background-image: url("/images/bg-card-front.png");
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 20px;
+}
+
+.card-text {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding-top: 30px;
+}
+
+.owner-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+#card-number {
+    font-size: 2rem;
+    line-height: 0.1;
+}
+
+/* back card customization and positioning */
+.card-back {
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+    height: 245px;
+    width: 447px;
+    background-image: url("/images/bg-card-back.png");
+    background-repeat: no-repeat;
+}
+
+#cvc-code {
+    position: inherit;
+    left:22rem;
+    top: 6.7rem;
+    font-size: 1.1rem;
+}
+
+
+/* RIGHT SECTION */
+.right {
+    min-height: 100vh;
+    color: hsl(278, 68%, 11%);
+    display: grid;
+    align-items: center;
+}
+
+/* form custiomization */
+
+.form{
+    max-width: 500px;   
+}
+
+.flex-column{
+    padding: 0.5rem 0;
+}
+
+.form-control{
+   height: 45px;
+}
+.yy{
+    position: relative;
+    left: 0.5rem;
+}
+
+.exp-date{
+    max-width: 170px;
+}
+
+p{
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* BUTTON */
+.btn{
+    width: 83%;
+    margin-top: 10px;
+    padding: 11px 0px;
+    color: #fff;
+    background-color: hsl(278, 68%, 11%);
+    letter-spacing: 0.05em;
+    border-radius: 0;
+}
+
+/* Frontent mentor badge */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
