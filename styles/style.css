@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/bg-main-desktop.png');
+    background-image: url("../images/bg-main-desktop.png");
     background-repeat: no-repeat;
     background-size: 45vh 100vh;
     font-family: 'Space Grotesk', sans-serif;
@@ -16,7 +16,7 @@ body {
 .card-front {
     height: 245px;
     width: 447px;
-    background-image: url('../images/bg-card-front.png');
+    background-image: url("../images/bg-card-front.png");
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: 50% 50%;
@@ -48,7 +48,7 @@ body {
     top: 2rem;
     height: 245px;
     width: 447px;
-    background-image: url('../images/bg-card-back.png');
+    background-image: url("../images/bg-card-back.png");
     background-repeat: no-repeat;
 }
 
@@ -62,6 +62,7 @@ body {
 
 /* RIGHT SECTION */
 .right {
+    padding-left: 5rem;
     min-height: 100vh;
     color: hsl(278, 68%, 11%);
     display: grid;
@@ -113,6 +114,17 @@ p {
     background-color: hsl(278, 68%, 11%);
     letter-spacing: 0.05em;
     border-radius: 0;
+}
+
+.btn:hover{
+    background-color: hsl(278, 58%, 31%); 
+}
+
+/* alerts */
+.alert{
+    color: red;
+    position: absolute;
+    margin-top: 3.5rem;
 }
 
 /* Frontent mentor badge */
