@@ -54,7 +54,7 @@ body {
 
 #cvc-code {
     position: inherit;
-    left:22rem;
+    left: 22rem;
     top: 6.7rem;
     font-size: 1.1rem;
 }
@@ -70,33 +70,42 @@ body {
 
 /* form custiomization */
 
-.form{
-    max-width: 500px;   
+.form {
+    max-width: 500px;
 }
 
-.flex-column{
+.flex-column {
     padding: 0.5rem 0;
 }
 
-.form-control{
-   height: 45px;
+.form-control {
+    height: 45px;
 }
-.yy{
+
+.yy {
     position: relative;
     left: 0.5rem;
 }
 
-.exp-date{
+.exp-date {
     max-width: 170px;
 }
 
-p{
+p {
     font-size: 13px;
     line-height: 2;
 }
 
+
+
+.hover{
+    border-color: purple;
+    border-width: 2px;
+}
+
+
 /* BUTTON */
-.btn{
+.btn {
     width: 83%;
     margin-top: 10px;
     padding: 11px 0px;
