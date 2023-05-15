@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/bg-main-desktop.png");
+    background-image: url("/images/bg-main-desktop.png");
     background-repeat: no-repeat;
     background-size: 45vh 100vh;
     font-family: 'Space Grotesk', sans-serif;
@@ -16,7 +16,7 @@ body {
 .card-front {
     height: 245px;
     width: 447px;
-    background-image: url("images/bg-card-front.png");
+    background-image: url("/images/bg-card-front.png");
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: 50% 50%;
@@ -48,7 +48,7 @@ body {
     top: 2rem;
     height: 245px;
     width: 447px;
-    background-image: url("images/bg-card-back.png");
+    background-image: url("/images/bg-card-back.png");
     background-repeat: no-repeat;
 }
 
