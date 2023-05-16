@@ -29,15 +29,17 @@
         <div class="card-front">
           <img src="images\card-logo.svg" alt="card-logo">
           <div class="card-text">
-            <div id="card-number">
-              0000 0000 0000 0000
+            <div class="card-number-p">
+              <h1 id="card-number">0000 0000 0000 0000</h1>
             </div>
             <div class="owner-info">
               <div id="card-owner">
-                JANE APPLESEED
+                <p id="card-holder-name">JANE APPLESEED</p>
               </div>
               <div id="expiration-date">
-                00/00
+                <p class="date-card" id="mm">00</p>
+                <p class="date-card" id="slash">/</p>
+                <p class="date-card" id="yy">00</p>
               </div>
             </div>
           </div>
@@ -45,7 +47,7 @@
         <!-- back of the card -->
         <div class="card-back">
           <div id="cvc-code">
-            000
+            <p id="cvc-card">000</p>
           </div>
         </div>
       </div>
@@ -78,7 +80,7 @@
           <div class="col-5">
             <div class="d-flex flex-column">
               <p class="text mb-2">CVC</p>
-              <input class="form-control" id="cvc-input" type="password" placeholder="e.g. 123">
+              <input class="form-control" id="cvc-input" type="text" placeholder="e.g. 123">
             </div>
           </div>
           <div class="col-12">

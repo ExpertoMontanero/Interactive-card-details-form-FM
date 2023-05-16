@@ -152,3 +152,30 @@ $('#cvc-input').on('input', function () {
     $(this).val(sanitizedValue);
 });
 
+//CHANGING CARDS STYLE
+
+
+//cardholder name
+$("#cardholder-name-input").on("input", function () {
+    $("#card-holder-name").text($('#cardholder-name-input').val().toUpperCase());//upper case added
+});
+
+//card number
+$("#card-number-input").on("input", function () {
+    $("#card-number").text($('#card-number-input').val());
+});
+
+//month 
+$("#mm-exp").on("input", function () {
+    $("#mm").text($("#mm-exp").val())
+});
+
+//year
+$("#yy-exp").on("input", function () {
+    $("#yy").text($("#yy-exp").val())
+});
+
+//cvv code
+$("#cvc-input").on("input", function () {
+    $("#cvc-card").text($("#cvc-input").val());
+});
