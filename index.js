@@ -6,48 +6,61 @@ $(".form-control").hover(
         $(this).removeClass("hover");
     }
 );
-
-
 $(".form-control").on("focus", function () {
     $(this).addClass("hover");
 });
+
+
+// CHECKING INPUTS
 var chAlert = true;
 var cnAlert = true;
+var expAlert = true;
+var cvcAlert = true;
 $("#confirm-btn").on("click", function () {
-    // CHECKING INPUTS
 
-    //cardholder name alert
+    //cardholder name input alert
     if (!properNameInput() && chAlert == true) {
         $(".cardholder-form").append("<p class='alert' id='cardholder-alert'>Input your name and surrname properly</p>");
+        $("#cardholder-name-input").addClass("alert-border");
         chAlert = false;
     }
     else if (properNameInput()) {
-        chAlert = true;
         $("#cardholder-alert").remove();
+        $("#cardholder-name-input").removeClass("alert-border");
+        chAlert = true;
     }
 
-    //card number alert
+    //card number input alert
     if ((!$("#card-number-input").val() || $("#card-number-input").val().length < 19) && cnAlert == true) {
         $(".card-number-form").append("<p class='alert' id='card-number-alert'>Card number is too short, 16 digits required</p>");
+        $("#card-number-input").addClass("alert-border");
         cnAlert = false;
     }
     else if ($("#card-number-input").val().length == 19) {
         $('#card-number-alert').remove();
+        $("#card-number-input").removeClass("alert-border");
         cnAlert = true;
     }
-
-
-
-});
-//only numbers on exp date input
-$('#mm-exp').on('input', function () {
-    var e = $(this).val();
-    $('#mm-exp').val(numbersOnly(e));
-});
-
-$('#yy-exp').on('input', function () {
-    var e = $(this).val();
-    $('#yy-exp').val(numbersOnly(e));
+    //expiration date input alert
+    if (!($("#mm-exp").val() && $("#yy-exp").val()) && expAlert == true) {
+        $(".exp-date").append("<p class='alert' id='exp-date-alert'>Can't be blank</p>");
+        $(".exp-dates").addClass("alert-border");
+        expAlert = false;
+    }
+    else if (($("#mm-exp").val() && $("#yy-exp").val())) {
+        $("#exp-date-alert").remove();
+        $(".exp-dates").removeClass("alert-border");
+        expAlert = true;
+    }
+    //cvc input alert
+    if ($("#cvc-input").val().length < 3 && cvcAlert == true) {
+        $("#cvc-input").addClass("alert-border");
+        cvcAlert = false;
+    }
+    else if ($("#cvc-input").val().length == 3) {
+        $("#cvc-input").removeClass("alert-border");
+        cvcAlert = true;
+    }
 });
 
 // checking name input to have space in it
@@ -62,8 +75,8 @@ function properNameInput() {
 
 // card number adding '-' and max input length is 16 digits
 $('#card-number-input').on('input', function () {
-    currentLength = $(this).val().length - 1;
-    currentInput = $(this).val();
+    var currentLength = $(this).val().length - 1;
+    var currentInput = $(this).val();
     if (currentLength < 19) {
         var cardNumber = currentInput.replace(/[^0-9]/g, ''); // Remove non-numeric characters
         var formattedCardNumber = formatCardNumber(cardNumber);
@@ -73,6 +86,7 @@ $('#card-number-input').on('input', function () {
         $(this).val(currentInput.slice(0, currentLength));
     }
 });
+
 //adding '-' function to card number
 function formatCardNumber(cardNumber) {
     var formatted = '';
@@ -85,11 +99,56 @@ function formatCardNumber(cardNumber) {
     return formatted;
 };
 
+//Expiricy date input optimalization 
 
+//only numbers on exp date input
+$('#mm-exp').on('input', function () {
+    var e = $(this).val();
+    $('#mm-exp').val(numbersOnly(e));
+});
 
-//numbers only function 
+$('#yy-exp').on('input', function () {
+    var e = $(this).val();
+    $('#yy-exp').val(numbersOnly(e));
+});
 
+//two numbers input only function (used to moths and years input)
 function numbersOnly(element) {
-    var sanitizedValue = element.replace(/[^0-9]/g, '');
-    return sanitizedValue;
+    if (element.length <= 2) {
+        var sanitizedValue = element.replace(/[^0-9]/g, '');
+        return sanitizedValue;
+    }
+    else {
+        var sanitizedValue = element.slice(0, -1);
+        return sanitizedValue;
+    }
 }
+
+//input months from 1 to 12 only 
+$("#mm-exp").on("input", function () {
+    var currentLength = $(this).val().length;
+    var currentInput = $(this).val();
+    var lastCharacter = currentInput.slice(-1);
+    var firstCharacter = $(this).val().charAt(0);
+    var regexFirst = /^[01]$/;
+    var regexSecond = /^[0-2]$/;
+
+    if (!regexFirst.test(currentInput) && currentLength == 1) {
+        $(this).val("");
+    }
+    if (firstCharacter == 0) {
+
+    }
+    else if (currentLength == 2 && !regexSecond.test(lastCharacter)) {
+        $(this).val("");
+    }
+});
+
+//CVC code input
+$('#cvc-input').on('input', function () {
+    var inputValue = $(this).val();
+    var sanitizedValue = inputValue.replace(/\D/g, '');
+    sanitizedValue = sanitizedValue.slice(0, 3);
+    $(this).val(sanitizedValue);
+});
+
