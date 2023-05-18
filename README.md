@@ -25,11 +25,16 @@ Users should be able to:
 - See hover, active, and focus states for interactive elements on the page
 
 ### Screenshot
+![1](https://github.com/ExpertoMontanero/Interactive-card-details-form-FM/assets/103272474/b9196830-a9fa-4977-bc33-b5e58897d409)
+![2](https://github.com/ExpertoMontanero/Interactive-card-details-form-FM/assets/103272474/f943b625-5a9b-4a1a-be63-32f4aca86760)
+![3](https://github.com/ExpertoMontanero/Interactive-card-details-form-FM/assets/103272474/cb183fc4-df56-40c1-b34a-5bbbc11854ff)
+![4](https://github.com/ExpertoMontanero/Interactive-card-details-form-FM/assets/103272474/e83ec51b-2805-4f83-be33-c6c7703b8ca6)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/use-of-jquerry-bootstrap5-semantic-html-css-RyU0qaod7i
+- Live Site URL: https://expertomontanero.github.io/Interactive-card-details-form-FM/
 
 ### Built with
 
