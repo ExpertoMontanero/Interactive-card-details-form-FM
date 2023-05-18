@@ -42,7 +42,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Tomasz Zawadzki](https://www.your-site.com)
 - Frontend Mentor - [@ExpertoMontanero](https://www.frontendmentor.io/profile/ExpertoMontanero)
 - Instagram - [@t_zawadzkiii](https://www.instagram.com/t_zawadzkiii/)
 
