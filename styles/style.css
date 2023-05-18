@@ -291,6 +291,9 @@ p {
         margin-top: 2rem;
         margin-bottom: 0;
         padding-bottom: 0;
+        width: 80%;
+        right:9rem;
+        top:2rem;
     }
 
 }
