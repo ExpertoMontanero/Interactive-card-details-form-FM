@@ -22,79 +22,78 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-6 left">
-        <!-- front of the card -->
-        <div class="card-front">
-          <img src="images\card-logo.svg" alt="card-logo">
-          <div class="card-text">
-            <div class="card-number-p">
-              <h1 id="card-number">0000 0000 0000 0000</h1>
+  <div class="background">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 left">
+          <!-- front of the card -->
+          <div class="card-front">
+            <img src="images\card-logo.svg" alt="card-logo">
+            <div class="card-text">
+              <div class="card-number-p">
+                <h1 id="card-number">0000 0000 0000 0000</h1>
+              </div>
+              <div class="owner-info">
+                <div id="card-owner">
+                  <p id="card-holder-name">JANE APPLESEED</p>
+                </div>
+                <div id="expiration-date">
+                  <p class="date-card" id="mm">00</p>
+                  <p class="date-card" id="slash">/</p>
+                  <p class="date-card" id="yy">00</p>
+                </div>
+              </div>
             </div>
-            <div class="owner-info">
-              <div id="card-owner">
-                <p id="card-holder-name">JANE APPLESEED</p>
-              </div>
-              <div id="expiration-date">
-                <p class="date-card" id="mm">00</p>
-                <p class="date-card" id="slash">/</p>
-                <p class="date-card" id="yy">00</p>
-              </div>
+          </div>
+          <!-- back of the card -->
+          <div class="card-back">
+            <div id="cvc-code">
+              <p id="cvc-card">000</p>
             </div>
           </div>
         </div>
-        <!-- back of the card -->
-        <div class="card-back">
-          <div id="cvc-code">
-            <p id="cvc-card">000</p>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="col-6 right">
-
-        <div class="row form">
-          <div class="col-10">
-            <div class="d-flex flex-column cardholder-form">
-              <p class="text mb-1">CARDHOLDER NAME</p>
-              <input class="form-control mb-3" id="cardholder-name-input" type="text" placeholder="e.g. Jane Appleseed">
-            </div>
-          </div>
-          <div class="col-10">
-            <div class="d-flex flex-column card-number-form">
-              <p class="text mb-1">CARD NUMBER</p>
-              <input class="form-control mb-3" id="card-number-input" type="text" placeholder="1234 5678 4356 7890">
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="d-flex flex-column">
-              <p class="text mb-2">EXP. DATE (MM/YY)</p>
-              <div class="input-group mb-3 exp-date">
-                <input class="form-control mb-1 rounded exp-dates" id="mm-exp" type="text" placeholder="MM">
-                <input class="form-control mb-1 rounded yy exp-dates" id="yy-exp" type="text" placeholder="YY">
+        <div class="col-lg-6 right">
+          <div class="row form">
+            <div class="col-10">
+              <div class="d-flex flex-column cardholder-form">
+                <p class="text mb-1">CARDHOLDER NAME</p>
+                <input class="form-control mb-3" id="cardholder-name-input" type="text"
+                  placeholder="e.g. Jane Appleseed">
               </div>
             </div>
-          </div>
-          <div class="col-5">
-            <div class="d-flex flex-column">
-              <p class="text mb-2">CVC</p>
-              <input class="form-control" id="cvc-input" type="text" placeholder="e.g. 123">
+            <div class="col-10">
+              <div class="d-flex flex-column card-number-form">
+                <p class="text mb-1">CARD NUMBER</p>
+                <input class="form-control mb-3" id="card-number-input" type="text" placeholder="1234 5678 4356 7890">
+              </div>
             </div>
-          </div>
-          <div class="col-12">
-            <div class="btn mb-1 rounded" id="confirm-btn">
-              <span class="ps-3">Confirm</span>
-              <span class="fas fa-arrow-right"></span>
+            <div class="col-5">
+              <div class="d-flex flex-column">
+                <p class="text mb-2">EXP. DATE (MM/YY)</p>
+                <div class="input-group mb-3 exp-date">
+                  <input class="form-control mb-1 rounded exp-dates" id="mm-exp" type="text" placeholder="MM">
+                  <input class="form-control mb-1 rounded yy exp-dates" id="yy-exp" type="text" placeholder="YY">
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="d-flex flex-column">
+                <p class="text mb-2">CVC</p>
+                <input class="form-control" id="cvc-input" type="text" placeholder="e.g. 123">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="btn mb-1 rounded" id="confirm-btn">
+                <span class="ps-3">Confirm</span>
+                <span class="fas fa-arrow-right"></span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
     crossorigin="anonymous"></script>

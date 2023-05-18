@@ -16,6 +16,10 @@ var chAlert = true;
 var cnAlert = true;
 var expAlert = true;
 var cvcAlert = true;
+var chAlt = true;
+var cnAlt = true;
+var expAlt = true;
+var cvcAlt = true;
 $("#confirm-btn").on("click", function () {
 
     //cardholder name input alert
@@ -23,11 +27,13 @@ $("#confirm-btn").on("click", function () {
         $(".cardholder-form").append("<p class='alert' id='cardholder-alert'>Input your name and surrname properly</p>");
         $("#cardholder-name-input").addClass("alert-border");
         chAlert = false;
+        chAlt = true;
     }
     else if (properNameInput()) {
         $("#cardholder-alert").remove();
         $("#cardholder-name-input").removeClass("alert-border");
         chAlert = true;
+        chAlt = false;
     }
 
     //card number input alert
@@ -35,32 +41,42 @@ $("#confirm-btn").on("click", function () {
         $(".card-number-form").append("<p class='alert' id='card-number-alert'>Card number is too short, 16 digits required</p>");
         $("#card-number-input").addClass("alert-border");
         cnAlert = false;
+        cnAlt = true;
     }
     else if ($("#card-number-input").val().length == 19) {
         $('#card-number-alert').remove();
         $("#card-number-input").removeClass("alert-border");
         cnAlert = true;
+        cnAlt = false;
     }
     //expiration date input alert
     if (!($("#mm-exp").val() && $("#yy-exp").val()) && expAlert == true) {
         $(".exp-date").append("<p class='alert' id='exp-date-alert'>Can't be blank</p>");
         $(".exp-dates").addClass("alert-border");
         expAlert = false;
+        expAlt = true;
     }
     else if (($("#mm-exp").val() && $("#yy-exp").val())) {
         $("#exp-date-alert").remove();
         $(".exp-dates").removeClass("alert-border");
         expAlert = true;
+        expAlt = false;
     }
     //cvc input alert
     if ($("#cvc-input").val().length < 3 && cvcAlert == true) {
         $("#cvc-input").addClass("alert-border");
         cvcAlert = false;
+        cvcAlt = true;
     }
     else if ($("#cvc-input").val().length == 3) {
         $("#cvc-input").removeClass("alert-border");
         cvcAlert = true;
+        cvcAlt = false;
     }
+
+    if (cvcAlt == false && cnAlt == false && expAlt == false && chAlt == false) {
+        SubmitFunction();
+    };
 });
 
 // checking name input to have space in it
@@ -179,3 +195,16 @@ $("#yy-exp").on("input", function () {
 $("#cvc-input").on("input", function () {
     $("#cvc-card").text($("#cvc-input").val());
 });
+
+
+//SUBMITED STATE
+function SubmitFunction() {
+    $(".right").empty();
+    var submitedHTML = `<div class="container-fluid" id="submited">
+    <img src="images/icon-complete.svg" alt="icon-completed">
+    <h1 id="thank-you">THANK YOU!</h1>
+    <p id="submited-text">We've added your card details</p>
+    <div class="btn mb-1 rounded" id="continue-btn">Continue</div>
+  </div>`;
+    $(".right").append(submitedHTML);
+}

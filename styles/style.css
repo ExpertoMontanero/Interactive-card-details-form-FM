@@ -1,10 +1,16 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url("../images/bg-main-desktop.png");
-    background-repeat: no-repeat;
-    background-size: 45vh 100vh;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
     color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -15,6 +21,23 @@ p {
     font-size: 13px;
     line-height: 2;
 }
+
+/* background */
+.background {
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 26%;
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid {
+    min-width: 100vw;
+}
+
 
 /* LEFT SECTION */
 .left {
@@ -164,6 +187,54 @@ p {
 #exp-date-alert {
     margin-top: 1.7rem;
 }
+
+/* COMPLETED STATE */
+
+
+#submited {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    min-width: 340px;
+    right: 260px;
+}
+
+#continue-btn {
+    width: 45%;
+}
+
+#thank-you {
+    margin-top: 3rem;
+    letter-spacing: 4px;
+}
+
+#submited-text {
+    font-size: 18px;
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 2rem;
+}
+
+/* MEDIA QUERRY */
+
+@media only screen and (max-width: 1400px) {
+    .form {
+        margin-left: 4rem;
+        min-width: 80%;
+    }
+
+    .left {
+        position: relative;
+        right: 100px;
+    }
+
+    #submited {
+        left: 50px;
+    }
+
+}
+/* MOBILE DESIGN */
+@media only screen and (max-width: 1200px) {}
+
 
 /* Frontent mentor badge */
 .attribution {
